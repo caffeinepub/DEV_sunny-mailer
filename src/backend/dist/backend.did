@@ -1,0 +1,8 @@
+type SendEmailResult = 
+ variant {
+   err: text;
+   ok;
+ };
+service : {
+  sendEmail: (to: text, subject: text, body: text) -> (SendEmailResult);
+}
